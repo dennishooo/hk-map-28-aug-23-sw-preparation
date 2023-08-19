@@ -84,3 +84,14 @@ console.log(someColleagues);
 
 console.log(students.filter((student) => student.gender === "M"));
 console.log(students.forEach((x) => x));
+
+let names = ["dennis", "jason", "jonathan"];
+let x = "blah";
+let value = "burrrrrrh";
+
+let country;
+
+let filteredName = names.map((value) => ({
+  value,
+}));
+console.log(filteredName);
