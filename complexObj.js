@@ -17,23 +17,33 @@ let amy = dennis.gfList[0];
 console.log(amy);
 
 // pointing to memory address
-let somethingA = dennis;
+let sameDennis = dennis;
+
 // shallow copy
-let somethingB = { ...dennis };
+let shallowCopyOfDennis = { ...dennis };
+
 // deep copy
-let somethingC = JSON.parse(JSON.stringify(dennis));
+let deepCopyOfDennis = JSON.parse(JSON.stringify(dennis));
 
 console.log(somethingA);
 
 somethingA.name = "something";
 
-somethingB.gfList[0].name = "dada";
-somethingB.age = 30;
+shallowCopyOfDennis.gfList[0].name = "dada";
+shallowCopyOfDennis.age = 30;
 
-somethingC.gfList[1].name = "elaine";
+deepCopyOfDennis.gfList[1].name = "elaine";
 
 console.log(dennis.name);
 
+// while we are editing the shallow copy of dennis,
+// the copy that are passed by values become different from the original one.
+// however, the nested object from original are being passed as a reference to the shallow copy
+// therefore, modifying the shallow copy's one would change the original one
 console.log(dennis.age);
 console.log(dennis.gfList[0].name);
+
+// while we are editing the deep copy of dennis,
+// it wont affect the original dennis
 console.log(dennis.gfList[1].name);
+console.log(deepCopyOfDennis.gfList[1].name);

@@ -21,6 +21,8 @@ let colleagues = [
     gender: "F",
   },
 ];
+
+// function can be defined in different ways
 function add() {}
 // const filterFunc = (x) => {
 //   console.log(x);

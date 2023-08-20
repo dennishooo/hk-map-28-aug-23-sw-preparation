@@ -46,14 +46,20 @@ let colleagues = [
     gender: "F",
   },
 ];
+
+// student become a variable that contain the value of the element
+// from students[] in every iteration
 for (let student of students) {
   console.log(student);
 }
 
+// we access the element of the students[] with the index
+// every iteration the i would increase, until the i is not smaller than students[]' length
 for (let i = 0; i < students.length; i++) {
   console.log(`student ${i}:`, students[i]);
 }
 
+// when we call this function, nothing is being returned
 function findEatableStudentWithOutReturn(list) {
   let eatableStudents = [];
   for (let student of list) {
@@ -62,6 +68,8 @@ function findEatableStudentWithOutReturn(list) {
     }
   }
 }
+
+// when we call this function, eatableStudents[] is being returned
 function findEatableStudent(list) {
   let eatableStudents = [];
   for (let student of list) {
