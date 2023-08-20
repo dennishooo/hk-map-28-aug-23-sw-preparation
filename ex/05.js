@@ -5,7 +5,7 @@ const RNA = {
   A: "U",
 };
 
-let dna = "GCTA";
+// let dna = "GCTA";
 // let rna = [];
 // for (let key of dna.split("")) {
 //   console.log(key);
